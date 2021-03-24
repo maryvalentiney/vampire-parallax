@@ -1,0 +1,6 @@
+@mixin box {
+  padding: 5px;
+  border: 1px solid black;
+  background-color: invert($primary-color);
+  color: $primary-color;
+}

@@ -1,0 +1,150 @@
+// Magic parallax mixins
+$parallax-perspective: 1 !default;
+$parallax-element: "body" !default;
+$parallax-ios: true !default;
+@mixin parallax-init($perspective : $parallax-perspective, $element : $parallax-element, $parallax-ios : $parallax-ios) {
+  @if $element == "body" {
+    body,
+    html {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  }
+
+  #{$element} {
+    overflow: auto;
+    perspective: $perspective * 1px;
+    transform-style: preserve-3d;
+    // Allows for smooth scrolling but disables parallax effects.
+    @if $parallax-ios == false {
+      -webkit-overflow-scrolling: touch;
+    }
+    // Preserve 3D
+    &,
+    * {
+      transform-style: preserve-3d;
+    }
+  }
+}
+@mixin parallax($distance : 0, $perspective : $parallax-perspective) {
+  transform: translateZ($distance * $perspective * 1px) scale(abs($distance - 1));
+  z-index: $distance * 1000;
+}
+// End of magic parallax mixins
+// start of images
+
+.parallax2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.parallax2_container {
+  @include parallax(0.2);
+  margin-top: 20px;
+}
+
+.parallax_img {
+  @include parallax(0.2);
+  height: 900px;
+  background-image: url("../dist/img/covershot.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90% auto;
+}
+
+.parallax_img2 {
+  background-image: url("../dist/img/powerboys.png");
+}
+@media screen and (max-width: 768px) {
+  .parallax_img {
+    background-attachment: inherit;
+  }
+}
+
+.parallax_img3 {
+  background-image: url("../dist/img/snack.png");
+}
+@media screen and (max-width: 768px) {
+  .parallax_img {
+    background-attachment: inherit;
+  }
+}
+
+.parallax_img4 {
+  background-image: url("../dist/img/sunlight.png");
+}
+@media screen and (max-width: 768px) {
+  .parallax_img {
+    background-attachment: inherit;
+  }
+}
+//end of images
+@import url(https://fonts.googleapis.com/css?family=Roboto:100);
+$primary: #1586D1;
+@include parallax-init;
+
+.parallax-container {
+  :nth-child(1) {
+    @include parallax(0);
+    top: 100px;
+    left: 50px;
+  }
+
+  :nth-child(2) {
+    @include parallax(0);
+    top: 100px;
+    left: 50px;
+  }
+
+  :nth-child(3) {
+    @include parallax(0);
+    top: 100px;
+    left: 60px;
+  }
+
+  :nth-child(4) {
+    @include parallax(0);
+    top: 100px;
+    left: 70px;
+  }
+
+  :nth-child(5) {
+    @include parallax(0);
+    top: 100px;
+    left: 80px;
+  }
+  padding: 10%;
+  max-width: 40em;
+  margin: auto;
+
+  > * {
+    position: absolute;
+  }
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 100;
+  background: #EEF1F3;
+  line-height: 1;
+}
+
+h1,
+h2 {
+  font-weight: 100;
+  margin: 0;
+}
+
+h1 {
+  font-size: 5em;
+  color: $primary;
+}
+
+h2 {
+  font-size: 3em;
+  @include parallax(0.1);
+}
