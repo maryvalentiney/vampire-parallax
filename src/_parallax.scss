@@ -41,6 +41,30 @@ $parallax-ios: true !default;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.parallax-floater {
+  @include parallax(0.6);
+}
+
+.parallax-nav {
+  @include parallax(0.1);
+  margin-right: 20px;
+}
+
+.parallax-nav2 {
+  @include parallax(0.1);
+  margin-left: 70px;
+}
+
+.parallax-nav3 {
+  @include parallax(0.1);
+  margin-left: 100px;
+}
+
+.parallax-nav4 {
+  @include parallax(0.1);
+  margin-left: 20px;
+}
+
 .parallax2_container {
   @include parallax(0.2);
   margin-top: 20px;
