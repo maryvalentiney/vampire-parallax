@@ -48,11 +48,16 @@ $parallax-ios: true !default;
 
 .parallax-floater1 {
   @include parallax(0.6);
-  margin-left: 75px;
+  margin-right: 10px;
 }
 
 .parallax-floater2 {
   @include parallax(0.6);
+  margin-left: 50px;
+}
+
+.parallax-floater3 {
+  @include parallax(0.4);
   margin-left: 50px;
 }
 
@@ -182,4 +187,9 @@ h1 {
 h2 {
   font-size: 3em;
   @include parallax(0.1);
+}
+
+.center {
+  margin-top: 40px;
+  font-size: 3em;
 }

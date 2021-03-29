@@ -12,6 +12,10 @@ h2 {
   font-size: 1.25em;
 }
 
+.center {
+  text-align: center;
+}
+
 h3 {
   text-align: center;
 }
@@ -22,7 +26,8 @@ header {
 }
 
 .container {
-  background: #e5cfa0;
+  background-color: #e5cfa0;
+  padding-bottom: 400px;
 }
 
 figure {
