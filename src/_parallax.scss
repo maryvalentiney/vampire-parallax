@@ -176,20 +176,20 @@ body {
 h1,
 h2 {
   font-weight: 100;
-  margin: 0;
+  margin: 15px;
 }
 
 h1 {
   font-size: 5em;
-  color: $primary;
+  color: #bd272f;
 }
 
 h2 {
   font-size: 3em;
-  @include parallax(0.1);
+  @include parallax(0.2);
 }
 
 .center {
-  margin-top: 40px;
+  margin-top: 90px;
   font-size: 3em;
 }
