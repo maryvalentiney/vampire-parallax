@@ -1,23 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap');
 $bodyfont: 'Quicksand', sans-serif;
+$headings: 'Hanalei Fill', cursive;
+$darkcolor: #0a0809;
+$lightcolor: #9f899f;
 
 p {
   margin: 1.8em;
   line-height: 1.8em;
   display: flex;
   font-family: $bodyfont;
+  color: $darkcolor;
+}
+
+h1 {
+  font-family: $headings;
 }
 
 h2 {
   font-size: 1.25em;
+  font-family: $headings;
+}
+
+.lighten {
+  color: $lightcolor;
 }
 
 .center {
   text-align: center;
+  font-family: $headings;
 }
 
 h3 {
   text-align: center;
+  font-family: $headings;
 }
 
 footer,
@@ -26,9 +42,10 @@ header {
 }
 
 .container {
-  background-color: #e5cfa0;
+  // background-color: #e5cfa0;
   padding-bottom: 400px;
   padding-top: 100px;
+  background: linear-gradient(180deg, #e5cfa0 0%, #3f395d 100%);
 }
 
 figure {

@@ -12,7 +12,7 @@ html {
   color: #222;
   font-size: 1em;
   // line-height: 1.4;
-  background-color: #e5cfa0;
+  // background: linear-gradient(180deg, #e5cfa0 0%, #3f395d 100%);
 }
 /*
  * Remove text-shadow in selection highlight:
@@ -24,12 +24,12 @@ html {
  * Customize the background color to match your design.
  */
 ::-moz-selection {
-  background: #b3d4fc;
+  background: #f93943;
   text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
+  background: #f93943;
   text-shadow: none;
 }
 /*
