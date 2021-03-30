@@ -42,23 +42,32 @@ $parallax-ios: true !default;
 }
 
 .parallax-floater {
-  @include parallax(0.6);
+  @include parallax(0.5);
   margin-right: 75px;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 .parallax-floater1 {
-  @include parallax(0.6);
+  @include parallax(0.5);
   margin-right: 10px;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 .parallax-floater2 {
-  @include parallax(0.6);
+  @include parallax(0.5);
   margin-left: 50px;
+  max-width: 50%;
+  max-height: 50%;
 }
 
 .parallax-floater3 {
-  @include parallax(0.4);
+  @include parallax(0.5);
   margin-left: 50px;
+  margin-top: 0;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 .parallax-nav {

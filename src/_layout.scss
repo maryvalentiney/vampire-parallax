@@ -43,9 +43,10 @@ header {
 
 .container {
   // background-color: #e5cfa0;
-  padding-bottom: 400px;
+  padding-bottom: 200px;
   padding-top: 100px;
-  background: linear-gradient(180deg, #e5cfa0 0%, #3f395d 100%);
+  background: linear-gradient(#e5cfa0, #3f395d);
+  // linear-gradient(180deg, #e5cfa0 50%, #3f395d 50%);
 }
 
 figure {
